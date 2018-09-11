@@ -2,7 +2,6 @@
 import datetime
 #class that is going to handle the different years of users
 class ClassYear():
-    now = datetime.datetime.now().year
 #function to get the age of the user
     def get_year(self):
         now = datetime.datetime.now().year
@@ -17,13 +16,13 @@ class ClassYear():
                     user_age = now - year_born
 
                     if user_age < 18:
-                        print("You are a minor")
+                        return "You are a minor"
                     elif user_age >= 18 and user_age <= 36:
-                        print("You are a youth")
+                        return "You are a youth"
                     else:
-                        print("You are an elder")
+                        return "You are an elder"
                     break
             except:
                 print("Please enter intergers only")
 get_method = ClassYear()
-get_method.get_year()
+print(get_method.get_year())
